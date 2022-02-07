@@ -1,7 +1,7 @@
-package com.example.servlet.web.frontcontroller.v3;
+package com.example.servlet.web.frontcontroller.v3.controller;
 
-import com.example.servlet.web.frontcontroller.ControllerV3;
 import com.example.servlet.web.frontcontroller.ModelView;
+import com.example.servlet.web.frontcontroller.v3.ControllerV3;
 
 import java.util.Map;
 

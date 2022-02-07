@@ -1,8 +1,11 @@
 package com.example.servlet.web.frontcontroller.v3;
 
-import com.example.servlet.web.frontcontroller.ControllerV3;
 import com.example.servlet.web.frontcontroller.ModelView;
 import com.example.servlet.web.frontcontroller.MyView;
+import com.example.servlet.web.frontcontroller.v3.ControllerV3;
+import com.example.servlet.web.frontcontroller.v3.controller.MemberFormControllerV3;
+import com.example.servlet.web.frontcontroller.v3.controller.MemberListControllerV3;
+import com.example.servlet.web.frontcontroller.v3.controller.MemberSaveControllerV3;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -31,7 +34,8 @@ public class FrontControllerServletV3 extends HttpServlet {
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        //getRequestURI쓰면   http://127.0.0.1:8080/front-controller/v1/save  이 중 front-controller/v1/save  가져옴
+        //get(requestURI)쓰면   http://127.0.0.1:8080/front-controller/v1/save  이 중 /front-controller/v1/save  가져옴
+        //get(requestURL)쓰면   전체를 다 가져옴
         String requestURI = request.getRequestURI();
 
         ControllerV3 controller = controllerMap.get(requestURI);
