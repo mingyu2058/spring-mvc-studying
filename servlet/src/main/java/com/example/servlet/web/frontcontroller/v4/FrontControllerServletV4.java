@@ -49,7 +49,7 @@ public class FrontControllerServletV4 extends HttpServlet {
         기존 V3에서 가져온 게필요 x, viewName을 바로 return 하니깐
         String viewName = mv.getViewName();
 */
-        
+
         Map<String, String> paramMap = createParamMap(request);
         Map<String, Object> model = new HashMap<>();
         String viewName = controller.process(paramMap, model);
