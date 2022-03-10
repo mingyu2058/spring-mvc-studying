@@ -14,6 +14,12 @@
     <div class="py-5 text-center">
         <h2>상품 상세</h2>
     </div>
+
+    <!-- param 값이 true이면 저장완료가 뜸-->
+    <!-- th:if는 조건이 참이면 작동 -->
+    <!-- param은 타임리프에서 쿼리 파라미터를 편리하게 조회하는 기능-->
+    <h2 th:if="${param.status}" th:text="'저장완료'"></h2>
+
     <div>
         <label for="itemId">상품 ID</label>
         <input type="text" id="itemId" name="itemId" class="form-control"
